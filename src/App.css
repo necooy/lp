@@ -1,0 +1,77 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+
+.landing {
+  width: 100%;
+  min-height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+
+.header {
+  width: 100%;
+  padding: 20px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255,255,255,0.1);
+  height: 130px;
+
+  
+}
+
+.header img {
+  height: 120px;
+}
+
+.infos {
+  display: flex;
+  gap: 200px;
+ 
+}
+
+.infos a {
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.compra-ingresso {
+  background: #b1963d;
+  padding: 20px 33px;
+  border: none;
+  font-weight: bold;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 25px;
+  transition: 0.2s;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.compra-ingresso:hover {
+  background: #000000;
+}
+
+
+.main-content {
+  margin-top: 40px;
+  padding-left: 80px;
+}
