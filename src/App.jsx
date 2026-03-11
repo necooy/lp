@@ -71,7 +71,9 @@ export default function App() {
               </select>
             </div>
 
-            <button className="btn-buscar-main">BUSCAR</button>
+            <button className="btn-buscar-main"
+            onClick={() => window.open("https://www.google.com/maps/place/Campinas,+SP/@-22.8920329,-47.2327054,11z/data=!3m1!4b1!4m6!3m5!1s0x94c8c61de74b6325:0x17e53a6a2178c22a!8m2!3d-22.9099384!4d-47.0626332!16s%2Fg%2F11bc5dx5jy?entry=ttu&g_ep=EgoyMDI2MDMwOS4wIKXMDSoASAFQAw%3D%3D", "_blank")}
+            >BUSCAR</button>
           </div>
         </div>
       </div>
