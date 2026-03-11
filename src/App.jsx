@@ -1,14 +1,22 @@
+import React, { useState } from "react";
 import "./App.css";
 import bgImage from "./assets/casa.jpg";
 import pagelogo from "./assets/nexora.png";
 
 export default function App() {
+  // Estado para controlar se o usuário quer Comprar ou Alugar
+  const [abaAtiva, setAbaAtiva] = useState("comprar");
+
+  const backgroundStyle = {
+    backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${bgImage})`,
+  };
+
   return (
-    <div className="landing" style={{ backgroundImage: `url(${bgImage})` }}>
+    <div className="landing" style={backgroundStyle}>
       
-      {/* MENU SUPERIOR */}
+      {/* HEADER (Seu original com animação) */}
       <div className="header">
-        <img src={pagelogo} width="120" />
+        <img src={pagelogo} alt="Nexora Logo" />
 
         <div className="infos">
           <a href="#">venda</a>
@@ -18,30 +26,65 @@ export default function App() {
 
         <button
           className="agendar"
-          onClick={() =>
-            window.open(
-              "https://store.steampowered.com/app/570/Dota_2/",
-              "_blank"
-            )
-          }
-        > 
+          onClick={() => window.open("https://wa.me/seunumeroaqui", "_blank")}
+        >
           agendar
         </button>
       </div>
 
-      {/* CONTEÚDO PRINCIPAL */}
-      
+      {/* CONTEÚDO PRINCIPAL (Configurado como Imobiliária) */}
+      <div className="main-content">
+        <div className="search-container">
+          
+          {/* SELETOR DE CATEGORIA */}
+          <div className="tabs">
+            <button 
+              className={abaAtiva === "comprar" ? "tab-btn active" : "tab-btn"} 
+              onClick={() => setAbaAtiva("comprar")}
+            >
+              Comprar
+            </button>
+            <button 
+              className={abaAtiva === "alugar" ? "tab-btn active" : "tab-btn"} 
+              onClick={() => setAbaAtiva("alugar")}
+            >
+              Alugar
+            </button>
+          </div>
+
+          {/* CAIXA DE BUSCA COM SELECT DE LOCALIZAÇÃO */}
+          <div className="search-box">
+            <div className="field-group">
+              <label>Localização</label>
+              <select className="select-imobiliaria">
+                <option value="">Selecione a cidade...</option>
+                <option value="sp">São Paulo - SP</option>
+                <option value="rj">Rio de Janeiro - RJ</option>
+                <option value="curitiba">Curitiba - PR</option>
+              </select>
+            </div>
+
+            <div className="field-group">
+              <label>Tipo de Imóvel</label>
+              <select className="select-imobiliaria">
+                <option value="casa">Casa</option>
+                <option value="ap">Apartamento</option>
+                <option value="lote">Terreno</option>
+              </select>
+            </div>
+
+            <button className="btn-buscar-main">BUSCAR</button>
+          </div>
+        </div>
+      </div>
+
+      {/* BOTÃO DE CONTATO (Seu original) */}
       <button
-          className="contato"
-          onClick={() =>
-            window.open(
-              "https://web.whatsapp.com",
-              "_blank"
-            )
-          }
-        >
-          📞
-        </button>
+        className="contato"
+        onClick={() => window.open("https://web.whatsapp.com", "_blank")}
+      >
+        📞
+      </button>
     </div>
   );
 }
