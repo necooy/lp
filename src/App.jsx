@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 import bgImage from "./assets/casa.jpg";
-import pagelogo from "./assets/nexora.png";
 
 export default function App() {
   // Estado para controlar se o usuário quer Comprar ou Alugar
@@ -16,7 +15,6 @@ export default function App() {
       
       {/* HEADER (Seu original com animação) */}
       <div className="header">
-        <img src={pagelogo} alt="Nexora Logo" />
 
         <div className="infos">
           <a href="#">venda</a>
