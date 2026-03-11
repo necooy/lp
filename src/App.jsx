@@ -17,21 +17,31 @@ export default function App() {
         </div>
 
         <button
-          className="compra-ingresso"
+          className="agendar"
           onClick={() =>
             window.open(
               "https://store.steampowered.com/app/570/Dota_2/",
               "_blank"
             )
           }
-        >
+        > 
           agendar
         </button>
       </div>
 
       {/* CONTEÚDO PRINCIPAL */}
       
-      
+      <button
+          className="contato"
+          onClick={() =>
+            window.open(
+              "https://web.whatsapp.com",
+              "_blank"
+            )
+          }
+        >
+          📞
+        </button>
     </div>
   );
 }

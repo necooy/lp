@@ -12,7 +12,6 @@ body, html {
   overflow-x: hidden;
 }
 
-
 .landing {
   width: 100%;
   min-height: 100vh;
@@ -22,17 +21,27 @@ body, html {
   position: relative;
 }
 
-
 .header {
+  position: relative;
   width: 100%;
   padding: 20px 60px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255,255,255,0.1);
+  background: rgb(7, 62, 21);
   height: 130px;
+  animation: aparecer 0.5s ease-out;
+}
 
-  
+@keyframes aparecer{
+  from{
+    opacity: 0;
+    transform: translateY(-150px);
+}
+  to{
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .header img {
@@ -54,24 +63,55 @@ body, html {
   font-family: 'Courier New', Courier, monospace;
 }
 
-.compra-ingresso {
-  background: #b1963d;
+.agendar {
+  background:   #696453;
   padding: 20px 33px;
   border: none;
   font-weight: bold;
-  border-radius: 12px;
+  border-radius: 20px;
   cursor: pointer;
   font-size: 25px;
   transition: 0.2s;
   font-family: 'Courier New', Courier, monospace;
 }
 
-.compra-ingresso:hover {
-  background: #000000;
+.agendar:hover {
+  background: #ffffff;
 }
-
 
 .main-content {
   margin-top: 40px;
   padding-left: 80px;
+  background: #000;
+}
+
+.contato {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: #25d366; /* Cor do WhatsApp */
+  color: white;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: flush 0.3 ease-out;
+  z-index: 100;
+}
+
+@keyframes aparecer{
+  from{
+    opacity: 0;
+    transform: scale(0);
+}
+  to{
+    opacity: 0;
+    transform: scale(2);
+  }
 }
